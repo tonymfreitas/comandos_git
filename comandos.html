@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M"
+        crossorigin="anonymous">
+
+</head>
+
+<body>
+    <header class="jumbotron">
+        <h1 class="text-center">Comandos git</h1>
+    </header>
+    <div>
+        <ul class="list-group">
+            <li class="list-group-item">
+                <span class="text-primary">GIT INIT -> </span> Cria um repositório git localmente
+            </li>
+            <li class="list-group-item">
+                <span class="text-primary">GIT STATUS -> </span> Apresenta os estados dos arquivos do repositório local. Exemplo: modificado, adicionado, deletado...
+            </li>
+            <li class="list-group-item">
+                <span class="text-primary">GIT LOG -> </span> Lista todos os commits efetuados
+            </li>
+            <li class="list-group-item">
+                <span class="text-primary">GIT LOG -N 2 -> </span> Lista os dois últimos commits
+            </li>
+            <li class="list-group-item">
+                <span class="text-primary">GIT LOG --PARENTS -> </span> Lista os commits associados à seus pais
+            </li>
+            <li class="list-group-item">
+                <span class="text-primary">GIT ADD EXEMPLO.HTML -> </span> Adiciona o arquivo exemplo.html na área de stage, o arquivo começa à ser rastreado pelo git
+            </li>
+            <li class="list-group-item">
+                <span class="text-primary">GIT ADD . -> </span> Adiciona todos os arquivos na área de stage
+            </li>
+            <li class="list-group-item">
+                <span class="text-primary">GIT RM EXEMPLO.HTML -> </span> Remove o arquivo exemplo.html do repositório e adiciona a alteração na área de stage (remoção)
+            </li>
+            <li class="list-group-item">
+                <span class="text-primary">GIT MV EXEMPLO.HTML NOVO.HTML-> </span> Renomeia o arquivo exemplo.html para novo.html </li>
+            <li class="list-group-item">
+            <span class="text-primary">GIT MV EXEMPLO.JS JS/EXEMPLO.JS -> </span> Move o arquivo exemplo.js para a pasta js <span class="text-danger">OBSERVAÇÃO: para mover o arquivo a pasta já deve estar criada</span>
+            </li>
+            <li class="list-group-item">
+                <span class="text-primary">GIT RESET -- INDEX.HTML -> </span> Remove o arquivo index.html da área de stage mantendo sua a alteração no arquivo intacta, o arquivo volta a ser não rastrado.
+            </li>
+            <li class="list-group-item">
+                <span class="text-primary">GIT RESET -> </span> Remove todos os arquivos da área de stage , mantendo as alterações intactas nos arquivos.
+            </li>
+            <li class="list-group-item">
+                <span class="text-primary">GIT RESET --HARD -> </span> Remove todos os arquivos da área de stage descartando as alterações, voltando ao estado do último commit            </li>
+            <li class="list-group-item">
+                <span class="text-primary">GIT REVERT --NO-EDIT 666 -> </span> Desfazendo alterações do commit de código 666 <span class="text-danger">OBSERVAÇÃO: No caso de passarmos um código de commit antigo, apenas as alterações feitas naquele commit serão desfeitas. </span>
+            </li>
+            <li class="list-group-item">
+                <span class="text-primary">GIT RESET --HARD 666 -> </span> Desfaz as alterações do commit de código 666 <span class="text-danger">OBSERVAÇÃO: OUTRA FORMA DE DESFAZER ALTERAÇÕES COMMITADAS</span>
+            </li>
+            <li class="list-group-item">
+                <span class="text-primary">GIT COMMIT -M "COMMIT INICIAL" -> </span> Grava os arquivos da área de stage no repositório local, o parâmetro -m serve para passar uma mensagem
+            </li>
+            <li class="list-group-item">
+                <span class="text-primary">GIT COMMIT -A -M "COMMIT INICIAL" -> </span> Adiciona todos os arquivos na área de stage e grava no repositório local, é equivalente ao GIT ADD + GIT COMMIT <span class="text-danger">OBSERVAÇÃO: Não funciona para arquivos não rastreados, ou seja, arquivos que ainda não foram adicionados na área de stage. Exemplo : Arquivos que acabaram de ser criados</span>
+            </li>
+            <li class="list-group-item">
+                <span class="text-primary">GIT DIFF EXEMPLO.TXT -> </span> Mostra as mudanças entre o arquivo exemplo.txt alterado(não rastreado) e o commitado anteriormente
+            </li>
+             <li class="list-group-item">
+                <span class="text-primary">GIT DIFF --STAGED -> </span> Mostra as mudanças entre um arquivo na área de stage
+            </li>
+             <li class="list-group-item">
+                <span class="text-primary">GIT SHOW 666 -> </span> Mostra informações sobre o commit de código 666
+            </li>
+             <li class="list-group-item">
+                <span class="text-primary">GIT BRANCH DESIGN  -> </span> Cria uma nova branch chamada design
+            </li>
+             <li class="list-group-item">
+                <span class="text-primary">GIT BRANCH -V -> </span> Lista as branchs e seus commits associados
+            </li>
+             <li class="list-group-item">
+                <span class="text-primary">GIT BRANCH -d DESIGN -> </span> Delete a branch design <span class="text-danger">OBSERVAÇÃO: o parâmetro -d deve estar minúsculo</span>
+            </li>
+            <li class="list-group-item">
+                <span class="text-primary">GIT BRANCH -D DESIGN -> </span> Remove branch com commits, os commits são descartados <span class="text-danger">OBSERVAÇÃO: o parâmetro -D deve estar maiúsculo</span>
+            </li>
+            <li class="list-group-item">
+                <span class="text-primary">GIT BRANCH --NO-MERGED -> </span> Lista branchs ainda não mescladas à branch atual
+            </li>
+            <li class="list-group-item">
+                <span class="text-primary">GIT BRANCH -R -> </span> Lista branchs remotas
+            </li>
+            <li class="list-group-item">
+                <span class="text-primary">GIT BRANCH -A -> </span> Lista todas as branchs(remotas e locais)
+            </li>
+            <li class="list-group-item">
+                <span class="text-primary">GIT REMOTE ADD ORIGIN -> </span> Cria um repositório git localmente
+            </li>
+            <li class="list-group-item">
+                <span class="text-primary">GIT CHECKOUT -- INDEX.HTML -> </span> Desfaz alterações não rastreadas(fora da área de stage) do arquivo index.html
+            </li>
+            <li class="list-group-item">
+                <span class="text-primary">GIT CHECKOUT DESIGN -> </span> Troca para a branch design
+            </li>
+            <li class="list-group-item">
+                <span class="text-primary">GIT CHECKOUT -B DESIGN -> </span> Cria uma nova branch design e troca a branch  </li>
+            <li class="list-group-item">
+                <span class="text-primary">GIT CHECKOUT -B DESIGN ORIGIN/MASTER -> </span> Cria a branch local e troca a branch, associando-a a branch remota origin/master
+            </li>
+            <li class="list-group-item">
+                <span class="text-primary">GIT PUSH ORIGIN :DESIGN -> </span> Remove a branch design local e remoto.
+            </li>
+            <li class="list-group-item">
+                <span class="text-primary">GIT MERGE DESIGN -M "MESCLANDO BRANCHS" -> </span> Mesclando a branch design com a branch atual
+            </li>
+            <li class="list-group-item">
+                <span class="text-primary">GIT REBASE DESIGN -> </span> Mesclando a branch desgin com a branch atual (outra forma de mesclar)
+            </li>
+            <li class="list-group-item">
+                <span class="text-primary">GIT FETCH ORIGIN -> </span> Obtém commits de uma branch remota que ainda não estão presentes localmente, nesse caso está pegando a branch origin/master
+            </li>
+            <li class="list-group-item">
+                <span class="text-primary">GIT PULL -> </span> Sincroniza o repositório com a branch especificada = GIT FETCH + GIT MERGE
+            </li>
+            <li class="list-group-item">
+                <span class="text-primary">GIT PULL --REBASE -> </span> Sincroniza o repositório com a branch especificada = GIT FETCH + GIT REBASE
+            </li>
+            <li class="list-group-item">
+                <span class="text-primary">GIT PUSH ORIGIN MASTER -> </span> Envia os commits do repositório local para o repositório remoto, neste caso está enviando da branch remota origin/master para a branch master
+            </li>
+            <li class="list-group-item">
+                <span class="text-primary">GIT TAG V1.0 -> </span> Cria uma nova tag com o nome V1.0 para o último commit da branch atual
+            </li>
+            <li class="list-group-item">
+                <span class="text-primary">GIT TAG V1.0 666 -> </span> Cria uma nova tag com o nome V1.0 para o commit de código 666
+            </li>
+            <li class="list-group-item">
+                <span class="text-primary">GIT TAG -A V1.0 -M "NOVA TAG" -> </span> Cria uma tag anotada, ou seja, uma tag com mais informações, comom uma mensagem, criador, data, etc.
+            </li>
+            <li class="list-group-item">
+                <span class="text-primary">GIT SHOW -S V1.0 -> </span> Exibe informaões da tag anotada V1.0
+            </li>
+            <li class="list-group-item">
+                <span class="text-primary">GIT PUSH ORIGIN V1.0 -> </span> Envia a TAG V1.0 para o repositório remoto
+            </li>
+            <li class="list-group-item">
+                <span class="text-primary">GIT PUSH ORIGIN --TAGS -> </span> Envia todas as tags criadas para o repositório remoto
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>
